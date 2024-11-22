@@ -1,13 +1,14 @@
 import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "ScrewFast",
-  tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  title: "Digital Apes",
+  tagline: "Problem solvers as a service",
+  description: "Digital Apes is a web development agency specializing in high-quality web and app development services tailored to meet your unique business needs. Start exploring and contact our team to bring your digital vision to life with cutting-edge solutions and reliability.",
+  description_short: "Digital Apes specializes in web and app development tailored to your business needs.",
+  url: "https://digitalapes.ch",
+  author: "Digital Apes GmbH",
 };
+
 
 export const SEO = {
   title: SITE.title,
@@ -33,7 +34,7 @@ export const OG = {
   locale: "en_US",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+  title: `${SITE.title}: Web & App Development Services`,
+  description: "Empower your business with Digital Apes' expert web and app development services. Trusted by clients for our user-centric designs and innovative solutions, we bring simplicity, affordability, and reliability to every project. Discover the difference with Digital Apes today!",
   image: ogImageSrc,
 };

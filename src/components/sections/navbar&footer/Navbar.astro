@@ -2,11 +2,11 @@
 //Import relevant dependencies
 import ThemeIcon from "@components/ThemeIcon.astro";
 import NavLink from "@components/ui/links/NavLink.astro";
-import Authentication from "../misc/Authentication.astro";
+// import Authentication from "../misc/Authentication.astro";
 import enStrings from "@utils/navigation.ts";
 import frStrings from "@utils/fr/navigation.ts";
 import BrandLogo from "@components/BrandLogo.astro";
-import LanguagePicker from "@components/ui/LanguagePicker.astro";
+// import LanguagePicker from "@components/ui/LanguagePicker.astro";
 
 // Select the correct translation based on the page's lang prop:
 const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
@@ -72,9 +72,9 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         </button>
       </div>
       <!-- ThemeIcon component specifically for smaller screens -->
-      <span class="inline-block md:hidden">
+      <!-- <span class="inline-block md:hidden">
         <ThemeIcon />
-      </span>
+      </span> -->
     </div>
     <!-- Contains navigation links -->
     <div
@@ -83,25 +83,27 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
     >
       <!-- Navigation links container -->
       <div
-        class="mt-5 flex flex-col gap-x-0 gap-y-4 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-4 lg:gap-x-7 md:gap-y-0 md:ps-7"
+        class="mt-5 flex flex-col gap-x-0 gap-y-4 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-4 md:gap-y-0 md:ps-7 lg:gap-x-7"
       >
         <!-- Navigation links and Authentication component -->
-        {strings.navBarLinks.map(link => (
-          <NavLink url={link.url} name={link.name} />
-        ))}
+        {
+          strings.navBarLinks.map((link) => (
+            <NavLink url={link.url} name={link.name} />
+          ))
+        }
 
-        <Authentication />
-        <LanguagePicker />
+        <!-- <Authentication /> -->
+        <!-- <LanguagePicker /> -->
         <!-- ThemeIcon component specifically for larger screens -->
-        <span class="hidden md:inline-block">
+        <!-- <span class="hidden md:inline-block">
           <ThemeIcon />
-        </span>
+        </span> -->
       </div>
     </div>
   </nav>
 </header>
 <!-- Theme Appearance script to manage light/dark modes -->
-<script is:inline>
+<!-- <script is:inline>
   const HSThemeAppearance = {
     init() {
       const defaultTheme = "default";
@@ -124,7 +126,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         localStorage.setItem("hs_theme", theme);
       }
 
-      if (theme === "auto") {
+      if (theme === "dark") {
         theme = window.matchMedia("(prefers-color-scheme: dark)").matches
           ? "dark"
           : "default";
@@ -144,7 +146,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
 
       if (dispatchEvent) {
         window.dispatchEvent(
-          new CustomEvent("on-hs-appearance-change", { detail: theme }),
+          new CustomEvent("on-hs-appearance-change", { detail: theme })
         );
       }
     },
@@ -174,10 +176,10 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
 
   window.addEventListener("load", () => {
     const $clickableThemes = document.querySelectorAll(
-      "[data-hs-theme-click-value]",
+      "[data-hs-theme-click-value]"
     );
     const $switchableThemes = document.querySelectorAll(
-      "[data-hs-theme-switch]",
+      "[data-hs-theme-switch]"
     );
 
     $clickableThemes.forEach(($item) => {
@@ -185,8 +187,8 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         HSThemeAppearance.setAppearance(
           $item.getAttribute("data-hs-theme-click-value"),
           true,
-          $item,
-        ),
+          $item
+        )
       );
     });
 
@@ -204,7 +206,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
       });
     });
   });
-</script>
+</script> -->
 <!--Import the necessary Collapse and Overlay plugins-->
 <!--https://preline.co/plugins/html/collapse.html-->
 <!--https://preline.co/plugins/html/overlay.html-->

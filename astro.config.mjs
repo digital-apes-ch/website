@@ -4,10 +4,12 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://screwfast.uk",
+  site: "https://digitalapes.ch",
   image: {
     domains: ["images.unsplash.com"],
   },
@@ -29,12 +31,12 @@ export default defineConfig({
         defaultLocale: "en", // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
         locales: {
           en: "en", // The `defaultLocale` value must present in `locales` keys
-          fr: "fr",
+          de: "de",
         },
       },
     }),
     starlight({
-      title: "ScrewFast Docs",
+      title: "Digital Apes Docs",
       defaultLocale: "root",
       // https://github.com/withastro/starlight/blob/main/packages/starlight/CHANGELOG.md
       // If no Astro and Starlight i18n configurations are provided, the built-in default locale is used in Starlight and a matching Astro i18n configuration is generated/used.
@@ -92,8 +94,9 @@ export default defineConfig({
       components: {
         SiteTitle: "./src/components/ui/starlight/SiteTitle.astro",
         Head: "./src/components/ui/starlight/Head.astro",
-        MobileMenuFooter: "./src/components/ui/starlight/MobileMenuFooter.astro",
-        ThemeSelect: "./src/components/ui/starlight/ThemeSelect.astro",
+        MobileMenuFooter:
+          "./src/components/ui/starlight/MobileMenuFooter.astro",
+        // ThemeSelect: "./src/components/ui/starlight/ThemeSelect.astro",
       },
       head: [
         {
@@ -116,6 +119,7 @@ export default defineConfig({
       gzip: false,
       brotli: true,
     }),
+    react(),
   ],
   experimental: {
     clientPrerender: true,
