@@ -1,7 +1,7 @@
 import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "Digital Apes",
+  title: "Digital Apes GmbH",
   tagline: "Problem solvers as a service",
   description: "Digital Apes is a web development agency specializing in high-quality web and app development services tailored to meet your unique business needs. Start exploring and contact our team to bring your digital vision to life with cutting-edge solutions and reliability.",
   description_short: "Digital Apes specializes in web and app development tailored to your business needs.",
