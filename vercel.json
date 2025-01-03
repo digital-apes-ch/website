@@ -5,7 +5,7 @@
         "headers": [
           {
             "key": "Content-Security-Policy",
-            "value": "default-src 'self'; base-uri 'self'; form-action 'self'; frame-src https://tally.so/ 'self'; frame-ancestors 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://tally.so/widgets/embed.js https://www.googletagmanager.com/gtag/js?id=G-6LMFKCK65J; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; object-src 'none'; upgrade-insecure-requests; block-all-mixed-content"
+            "value": "default-src 'self'; base-uri 'self'; form-action 'self'; frame-src https://tally.so/ 'self'; frame-ancestors 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://tally.so/widgets/embed.js https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; object-src 'none'; upgrade-insecure-requests; block-all-mixed-content"
           },
           {
             "key": "Permissions-Policy",
